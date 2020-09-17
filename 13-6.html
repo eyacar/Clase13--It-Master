@@ -16,24 +16,31 @@
     var inicio = 1930;
     var fin = 2018;
     var i = inicio;
+    var y = []
     while (i <= fin){
-        if (!(i>1938 && i<1950)){
+        if (!(i>1938 && i<1950 && i != 1942 && i != 1946)){
             console.log (i)
+            y.push(i)
         }
         i = i + 4
     }
-   
     function calcular(){
+    console.log(y)   
     var año = document.getElementById("año").value;
-    if ((año >= 1930) && año.length >0){
-    document.getElementById("p").innerHTML = año + " Fue Mundial"}
+    c = []
+    if (año >= 1930 && año.length >0){
+    c.push(año)
+    console.log(c)
+    console.log(y.indexOf(c))
+    if (y.indexOf(c)>-1){
+    document.getElementById("p").innerHTML = c + " Fue Mundial"}
+    }
     else if(año.length < 1){
     alert("ERROR")
     }
     else{
     document.getElementById("p").innerHTML = año + " No hubo Munial"
     }  
-    document.getElementById("año").reset() 
     }
     </script>
 </body>

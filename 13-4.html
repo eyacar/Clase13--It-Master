@@ -25,17 +25,24 @@
     }
     #p{
         width: 30%;
-        height: 40px;
+        height: 90px;
         padding: 1%;
         border: 2px dotted green;
         margin: 1% 35%;
         font-family: sans-serif;
         color: blue;
     }
-    @media (max-width: 700px){
+    @media (max-width: 950px){
         form input#calcular {
             width: 90px;
             margin: 1% 40%;
+        }
+        form{
+            height: 350px;
+        }
+        #p{
+            height: 250px;
+            text-align: center;
         }
     }
     </style>
@@ -54,11 +61,15 @@
     function calculo(){
     var cambio = document.getElementById("valor").value
     var eleccion = document.getElementById("moneda").value
-        if (eleccion == "pesos"){
-            document.getElementById("p").innerHTML = (cambio*75)*1.65
+        if (eleccion == "dolar"){
+            a = cambio*75
+            b = (cambio*75)*0.30
+            c = (cambio*75)*0.35
+            total = a+b+c
+            document.getElementById("p").innerHTML = "Valor Oficial $"+a + " + Impuesto pais $" + b + " + Adelanto Impuesto a las Ganancias $"+ c + " = " + "Total $"+ total
             }
         else {
-            document.getElementById("p").innerHTML = (cambio/75)/1.65
+            document.getElementById("p").innerHTML = "U$S" + (cambio/75) 
         }
         }
     </script>

@@ -18,14 +18,14 @@ positivos(-6);
 positivos("Eze");
 positivos(true);
 
-</script>
+</script> 
 
 <!-- Ejercicio 2 -->
 <script>
   function promedio(a,b,c){
-        var resultado = (a+b+c)/3
-        if (!isNaN(resultado)) {
-            console.log("El Promedio es: "+resultado)    
+        if (!isNaN(a) && !isNaN(b) && !isNaN(c)) {
+            var resultado = (a+b+c)/3
+            console.log("El Promedio es: "+resultado.toFixed(2))    
         }
         else if (!isNaN(a) && isNaN(b) && !isNaN(c)){
             console.error("Error en variable definida: "+"(" +b+")")
@@ -38,7 +38,7 @@ positivos(true);
         }
     return resultado
   }
-  promedio(2,2,2)
+  promedio(2,3,2)
   promedio(2,"EZE",2)
   promedio("Tres",2,2)
   promedio(2,2,"Uno")
