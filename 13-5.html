@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="">Ingrese el año</label>
+        <input type="number" name="" id="año" placeholder="Ponga el año..">
+        <input type="button" value="Es Bisiesto?" onclick="calcular()">
+    </form>
+    <p id="p"></p>
+    <script>
+        function calcular(){
+        var año = document.getElementById("año").value
+        if (((año % 4 == 0 && año % 100 != 0) || año % 400 == 0) && año.length >0){
+            document.getElementById("p").innerHTML = año + " Año Bisiesto"
+        }
+        else if(año.length < 1){
+            alert("ERROR")
+        }
+        else{
+            document.getElementById("p").innerHTML = año + " No es Bisiesto"
+         }  
+        document.getElementById("año").reset() 
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form action="">
+
+<label for="">Ingrese su nombre si empieza con "A": </label>
+<input type="text" name="" id="nombre" placeholder="Ingrese su nombre...">
+<input type="button" value="Check" onclick="calcular()">
+<ul>
+    <p id="p"></p>
+</ul>
+
+</form>
+
+<script>
+var n = []
+function calcular(){
+    var n1 = document.getElementById("nombre").value
+    
+    if (n1[0] == "a" || n1[0] == "A"){
+        n.push(n1)
+        document.getElementById("p").innerHTML = n
+        console.log(n)
+    }
+    else {
+        document.getElementById("p").innerHTML = "ERROR"
+        alert("ERROR el nombre debe empezar con A")
+    }
+}
+</script>
+</body>
+</html>

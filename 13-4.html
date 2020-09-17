@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+           *{
+        margin: 0;
+        padding: 0;
+    }
+    form{
+        margin: 1% auto;
+        padding: 1%;
+        width: 60%;
+        height: 200px;
+        text-align: center;
+        border: 2px solid black;
+    }
+    #calcular{
+        display:block;
+        width: 10%;
+        margin: 2% 45%;
+    }
+    #p{
+        width: 30%;
+        height: 40px;
+        padding: 1%;
+        border: 2px dotted green;
+        margin: 1% 35%;
+        font-family: sans-serif;
+        color: blue;
+    }
+    @media (max-width: 700px){
+        form input#calcular {
+            width: 90px;
+            margin: 1% 40%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <form action="">
+    <input type="number" name="" id="valor" placeholder="Cantidad a cambiar">
+    <select name="" id="moneda">
+        <option value="dolar" >Dolares a Pesos</option> 
+        <option value="pesos" selected>Pesos a Dolares</option>
+    </select>
+    <input type="button" value="Calcular" id="calcular" onclick="calculo()">
+    <p id="p"></p>
+    </form>
+    <script>
+    function calculo(){
+    var cambio = document.getElementById("valor").value
+    var eleccion = document.getElementById("moneda").value
+        if (eleccion == "pesos"){
+            document.getElementById("p").innerHTML = (cambio*75)*1.65
+            }
+        else {
+            document.getElementById("p").innerHTML = (cambio/75)/1.65
+        }
+        }
+    </script>
+</body>
+</html>

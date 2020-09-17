@@ -1,0 +1,45 @@
+<!-- Ejercicio 1 -->
+<script>
+
+function positivos(numero){
+    if (isNaN(numero) || typeof(numero) == "boolean") {
+        console.log("ERROR")
+    }
+    else if (numero >= 0) {
+        console.log(numero + " Es Positivo")
+        }
+    else {
+        console.log(numero + " Es Negativo")
+    }
+return numero
+}
+positivos(16);
+positivos(-6);
+positivos("Eze");
+positivos(true);
+
+</script>
+
+<!-- Ejercicio 2 -->
+<script>
+  function promedio(a,b,c){
+        var resultado = (a+b+c)/3
+        if (!isNaN(resultado)) {
+            console.log("El Promedio es: "+resultado)    
+        }
+        else if (!isNaN(a) && isNaN(b) && !isNaN(c)){
+            console.error("Error en variable definida: "+"(" +b+")")
+        }
+        else if (isNaN(a) && !isNaN(b) && !isNaN(c)){
+            console.error("Error en variable definida: "+"(" +a+")")
+        }
+        else if (!isNaN(a) && !isNaN(b) && isNaN(c)){
+            console.error("Error en variable definida: "+"(" +c+")")
+        }
+    return resultado
+  }
+  promedio(2,2,2)
+  promedio(2,"EZE",2)
+  promedio("Tres",2,2)
+  promedio(2,2,"Uno")
+</script>

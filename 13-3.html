@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    form{
+        margin: 1% auto;
+        padding: 1%;
+        width: 60%;
+        height: 200px;
+        text-align: center;
+        border: 2px solid black;
+    }
+    #check{
+        display:block;
+        width: 10%;
+        margin: 2% 45%;
+    }
+    #p{
+        width: 30%;
+        height: 40px;
+        padding: 1%;
+        border: 2px dotted green;
+        margin: 1% 35%;
+        font-family: sans-serif;
+        color: blue;
+    }
+    @media (max-width: 700px){
+        form label{
+            display: block;
+        }
+        form input#check {
+            width: 90px;
+            margin: 1% 40%;
+        }
+    }
+</style>
+</head>
+<body>
+    <form action="">
+        <label for="">Nombre</label>
+        <input type="text" placeholder="Nombre.." name="" id="nombre">
+        <label for="">Apellido</label>
+        <input type="text" name="" placeholder="Apellido.." id="apellido">
+        <input type="button" onclick="m()" value="Check" id="check">
+        <p id="p"></p>
+    </form>
+    <script>
+    function m(){
+        var n = document.getElementById("nombre").value;
+        var a = document.getElementById("apellido").value;
+      if ((n.length > 2) && (a.length > 2)){
+          if (typeof(n) == "string" && typeof(a) == "string"){
+            document.getElementById("p").innerHTML = "Te llamas: " + n + " " + a
+          }
+          else {
+            document.getElementById("p").innerHTML = "Error"
+            alert("Error")
+          }
+      }
+      else {
+        document.getElementById("p").innerHTML = "Error"
+        alert("Error")
+      }
+    }
+    </script>
+</body>
+</html>
