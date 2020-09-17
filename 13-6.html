@@ -12,6 +12,8 @@
         <input type="button" value="Se jugo el mundial?" onclick="calcular()">
     </form>
     <p id="p"></p>
+
+    <!-- NO VA!!!
     <script>
     var inicio = 1930;
     var fin = 2018;
@@ -43,5 +45,20 @@
     }  
     }
     </script>
+     -->
+
+     <script>
+    function calcular(){  
+    var year = document.getElementById("año").value;
+    if (year >= 1930 && year <= 2020 && year != 1942 && year != 1946 && year%4 == 2 && year.length >0){
+    document.getElementById("p").innerHTML = year + " Fue Mundial"}
+    else if(year.length < 1){
+    alert("ERROR")
+    }
+    else{
+    document.getElementById("p").innerHTML = year + " No hubo Munial"
+    }  
+    }
+     </script>
 </body>
 </html>
